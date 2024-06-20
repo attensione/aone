@@ -7,10 +7,13 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "gh-pages": "^6.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
+    "sass": "^1.77.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -18,8 +21,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build --cname aone.pl"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build --cname aone.pl",
+    "dev": "npm run start"
   },
   "eslintConfig": {
     "extends": [

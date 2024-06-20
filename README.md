@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+### https://www.tiepphan.com/practical-react-project-structure-2024/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Styles
 
-## Available Scripts
+The styles folder contains style css of the project. Here we can store component-based custom styles.
+styles folder react structure 2024
 
-In the project directory, you can run:
+### Assets
 
-### `npm start`
+The assets folder contains all images, css files, font files, etc… for your project.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Context
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The context folder stores all your React context files that used to share states between components each other. There are large projects you will have multiple context you use across your application. If you are using a different state manage such as Redux, you can replace this folder for share states.
 
-### `npm test`
+### Configs
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The configs folder contains config files where we store environment variables. We will use this folder to setup configurations in your application. Besides you can use it to stores constant variables, then we just change a place, and they will apply for all placed that used.
 
-### `npm run build`
+### Layouts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The layouts folder contains dynamic layout that you want display based on your client’s information. This would be things like a sidebar, navbar, etc… If your application only has a layout then you can just place it in the components folder, but if you have multiple different layouts used across your application this is a great place to store them.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Helpers
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The helpers folder contains utilities functions. You should be store pure functions on this folder. This mean is each function will have its own responsibilities.
 
-### `npm run eject`
+### Hooks
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The hooks folder contains the hooks function to can reuse code logic for all components, and it uses to separate between code logic and your components. So your component just simple show render UI.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Services
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The services folder contains all your code for interface with any external API. On large projects you will have many different APIs you need to access and this folder is the place to put the code that interact with those APIs.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Types
 
-## Learn More
+If your applications created by react typescript. You can use this folder to contains interfaces, types that you use to define on components. This folder easy uses to share interfaces across components.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### States
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The states folder will be added if you use redux in your project. There are 2 folders named actions, reducers to manage states. They will be called in almost all the pages, so create actions, reduces according to pages name.
 
-### Code Splitting
+### Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This folder is very important in your project. Components are the building blocks of any react project. This folder contains collections UI components like button, card, modal, input, etc…, that can be used across various files in the project.
 
-### Analyzing the Bundle Size
+### Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The final folder that the pages folder indicate the route of the react application. Each file in this folder contains its route. A page can contain its sub folder. And every sub folder represent its own route. This folder is confused for yourself when you identify which components are in the pages folder, or in the feature folder. So, I propose we can reference ways the NextJS framework using app router to separate components.
