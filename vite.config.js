@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
     build: {
-        outDir: './deploy',
+        outDir: './docs',
         emptyOutDir: true,
         rollupOptions: {
             input: {
